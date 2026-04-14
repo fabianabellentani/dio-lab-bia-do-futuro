@@ -5,41 +5,69 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-Muitas pessoas enfrentam dificuldades para organizar sua vida financeira no dia a dia, especialmente quando lidam com múltiplos gastos, contas e falta de clareza sobre para onde o dinheiro está indo. Além disso, há uma barreira emocional e prática: o usuário nem sempre sabe por onde começar ou como estruturar suas finanças de forma simples e sem julgamento.
+Muitos clientes possuem dificuldade em compreender seu próprio comportamento financeiro e tomar decisões adequadas com base nele. Embora tenham acesso a dados como extratos, histórico de transações e produtos financeiros, essas informações são dispersas e pouco interpretáveis.
+
+Além disso, os atendimentos tradicionais são reativos: o cliente precisa saber o que perguntar. Isso faz com que oportunidades importantes, como reduzir gastos excessivos ou investir melhor, sejam frequentemente perdidas.
 
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-O agente atua como um companheiro financeiro inteligente, oferecendo uma experiência conversacional, acessível e acolhedora. Ele escuta o usuário, interpreta sua situação financeira e ajuda a organizar informações de forma clara e prática, sugerindo caminhos simples para melhorar o controle financeiro. Em vez de apenas ensinar conceitos, o agente atua de forma próxima e humana, ajudando o usuário a estruturar sua realidade financeira e tomar decisões com mais segurança e clareza.
+O agente financeiro inteligente atua como um consultor digital que analisa continuamente os dados do cliente, como histórico de transações, perfil de investidor e interações anteriores.
+
+A partir dessa análise, ele:
+
+- Identifica padrões de comportamento financeiro (ex: aumento de gastos, baixa taxa de investimento)
+- Antecipa necessidades do cliente, oferecendo recomendações antes mesmo de serem solicitadas
+- Sugere ações personalizadas, como redução de despesas ou opções de investimento adequadas ao perfil
+- Interage de forma consultiva, explicando decisões de maneira clara e contextualizada
+
+Dessa forma, o agente transforma dados brutos em insights acionáveis, promovendo uma gestão financeira mais eficiente e inteligente.
 
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-O agente é voltado para pessoas que desejam organizar melhor sua vida financeira de forma prática e sem complexidade, especialmente usuários que se sentem perdidos com seus gastos, que buscam uma abordagem mais leve e conversacional, ou que preferem apoio contínuo ao invés de soluções técnicas ou formais.
+O agente é voltado para clientes de instituições financeiras que desejam melhorar sua organização financeira e tomar decisões mais assertivas, mas que não possuem conhecimento técnico avançado sobre finanças.
+
+Isso inclui:
+
+- Pessoas físicas com renda ativa que desejam controlar melhor seus gastos
+- Clientes iniciantes no mundo dos investimentos
+- Usuários que buscam orientação prática e personalizada para planejamento financeiro
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+AurumIA
+
+O nome AurumIA deriva de ‘Aurum’ (ouro, em latim), representando valor e solidez financeira, combinado com IA (Inteligência Artificial), simbolizando análise inteligente e tomada de decisão baseada em dados.
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+O AurumIA atua como um consultor financeiro inteligente, com postura consultiva, analítica e proativa. Ele não se limita a responder perguntas, mas busca antecipar necessidades do cliente com base em dados e contexto.
+
+Seu comportamento é:
+
+- Consultivo: orienta o usuário na tomada de decisão
+- Proativo: sugere ações antes mesmo de ser solicitado
+- Educativo: explica conceitos financeiros de forma clara
+- Confiável: evita suposições e se baseia sempre em dados disponíveis
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+O tom do AurumIA é **profissional e acessível**, equilibrando clareza com linguagem técnica moderada.
+
+Ele evita termos excessivamente complexos e adapta a comunicação para ser compreensível mesmo para usuários com pouco conhecimento financeiro, mantendo sempre um nível adequado de formalidade esperado no setor bancário.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: "Olá! Vou analisar suas informações financeiras para te ajudar da melhor forma possível."
+- Confirmação: "Entendi. Vou considerar seu histórico financeiro para te orientar com mais precisão."
+- Erro/Limitação: "No momento não encontrei dados suficientes para essa análise, mas posso te ajudar com outras informações disponíveis."
 
 ---
 
@@ -49,22 +77,23 @@ O agente é voltado para pessoas que desejam organizar melhor sua vida financeir
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
+    A[Cliente] -->|Mensagem| B[Interface - Chat]
+    B --> C[Processamento Python]
+    C --> D[Base de Conhecimento CSV/JSON]
     D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    C --> E[AurumIA LLM]
+    E --> F[Validação]
+    F --> G[Resposta]
 ```
 
 ### Componentes
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Streamlit |
+| LLM | Ollama|
+| Base de Conhecimento | CSV e JSON |
+| Validação | Camada de verificação que restringe respostas a dados disponíveis e evita alucinações |
 
 ---
 
