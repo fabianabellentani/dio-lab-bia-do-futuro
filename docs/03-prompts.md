@@ -137,5 +137,12 @@ Se desejar, posso te ajudar a definir um plano mensal de aportes para alcançar 
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- [Observação 1]
-- [Observação 2]
+Durante o desenvolvimento dos prompts do AurumIA, foi possível observar que a clareza nas instruções fornecidas ao modelo de linguagem impacta diretamente na qualidade das respostas geradas.
+
+Inicialmente, respostas mais genéricas foram obtidas quando o contexto não estava bem estruturado. A partir da organização dos dados e da definição de regras explícitas no system prompt, o agente passou a gerar respostas mais precisas, coerentes e alinhadas ao perfil do cliente.
+
+Outro ponto importante foi a utilização de exemplos (few-shot prompting), que ajudaram a orientar o comportamento esperado do agente, reduzindo respostas fora do escopo e melhorando a consistência.
+
+Além disso, a definição de regras de segurança, como evitar suposições e admitir limitações, foi essencial para mitigar alucinações e aumentar a confiabilidade do agente.
+
+Por fim, ficou evidente que o uso de dados estruturados (transações, perfil e histórico) é fundamental para transformar o agente em uma ferramenta realmente consultiva, capaz de gerar insights relevantes e personalizados, indo além de um chatbot tradicional.
