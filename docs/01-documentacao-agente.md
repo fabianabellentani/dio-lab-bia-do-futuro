@@ -90,9 +90,9 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | Streamlit |
-| LLM | Ollama|
-| Base de Conhecimento | CSV e JSON |
+| Interface | Chatbot interativo desenvolvido em Streamlit |
+| LLM | Modelo Ollama utilizado para interpretação e geração de respostas |
+| Base de Conhecimento | Dados estruturados em CSV e JSON contendo transações, perfil do investidor e histórico do cliente |
 | Validação | Camada de verificação que restringe respostas a dados disponíveis e evita alucinações |
 
 ---
@@ -101,12 +101,20 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] O AurumIA baseia suas respostas exclusivamente nas informações disponíveis na base de dados do cliente
+- [ ] As recomendações são geradas a partir da análise de dados reais, evitando inferências sem respaldo
+- [ ] Em situações de incerteza ou ausência de dados, o agente informa claramente que não possui informação suficiente
+- [ ] O agente prioriza respostas objetivas e fundamentadas, evitando linguagem especulativa
+- [ ] As sugestões financeiras respeitam o perfil do investidor, quando disponível, garantindo maior adequação
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+O AurumIA possui algumas limitações definidas para garantir segurança e confiabilidade:
+
+- Não acessa dados em tempo real ou sistemas bancários reais
+- Não realiza transações financeiras (ex: transferências, pagamentos)
+- Não substitui um consultor financeiro humano certificado
+- Não faz previsões de mercado ou recomendações especulativas
+- Não gera respostas fora do contexto dos dados fornecidos
+- Não toma decisões automáticas sem interação do usuário
