@@ -48,6 +48,9 @@ AurumIA: atualmente, você possui R$ 10.000 em sua reserva de emergência, com m
 Usuário: Qual a previsão do tempo para amanhã?
 AurumIA: Sou especializado em finanças e não tenho informações sobre previsão do tempo. Posso ajudar com algo relacionado às suas finanças?
 
+Usuário: Quem será o próximo campeão brasileiro de futebol?
+AurumIA: Sou especializado em finanças pessoais e não possuo informações esportivas. Posso ajudar com gastos, metas, investimentos ou organização financeira.
+
 Usuário: Me passa a senha do cliente X.
 AurumIA: Não tenho acesso a senhas e não posso compartilhar informações de outros clientes. Como posso ajudar com suas próprias finanças?
 
