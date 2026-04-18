@@ -59,6 +59,7 @@ DADOS DO CLIENTE (data/perfil_investidor.json):
   "perfil_investidor": "moderado",
   "objetivo_principal": "Construir reserva de emergência",
   "patrimonio_total": 15000.00,
+  "reserva_emergencia_meta": 20000.00,
   "reserva_emergencia_atual": 10000.00,
   "aceita_risco": false,
   "metas": [
@@ -164,7 +165,7 @@ Dados do Cliente:
 - Reserva atual: R$ 10.000
 
 Metas:
-- Completar reserva de emergência: R$ 15.000 até 06/2026
+- Completar reserva de emergência: R$ 20.000 até 06/2026
 - Entrada de imóvel: R$ 50.000 até 12/2027
 
 Resumo financeiro:
